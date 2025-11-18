@@ -1,8 +1,14 @@
 # ============================================================
-# SimPy + PPO 실험 자동화 (Meta-RL 제거 버전)
+# SimPy + PPO 실험 자동화
 # ============================================================
-
 import os
+import sys
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(CURRENT_DIR, "src")
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
 import pandas as pd
 import time
 from GymWrapper import GymInterface
